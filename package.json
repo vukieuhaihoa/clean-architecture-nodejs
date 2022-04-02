@@ -15,7 +15,15 @@
     "lint:eslint": "eslint . --ext js,ts",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "yarn lint:fix",
+      "yarn prettier",
+      "git add ."
+    ]
   },
   "devDependencies": {
     "@types/dotenv-safe": "^8.1.2",
@@ -42,12 +50,5 @@
   },
   "dependencies": {
     "dotenv-safe": "^8.2.0"
-  }, 
-  "lint-staged": {
-    "*.ts": [
-      "npm run lint",
-      "npm run format",
-      "git add ."
-    ]
   }
 }

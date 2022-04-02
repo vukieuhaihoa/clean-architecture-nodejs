@@ -136,9 +136,11 @@ Note: This project run on Node version: v16.13.2
    npx ts-jest config:init
    ```
 
-   3.9 Add Husky
+   3.9 Add Husky and lint-staged
 
    Husky is package help me catch any git action => Actually my purpose using husky to check pre commit
+
+   Lint-staged => Only run eslint or test for file which have change, file no change => not run => save time :))))
 
    ```sh
    npx husky-init && yarn
