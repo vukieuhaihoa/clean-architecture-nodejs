@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["eslintignore", "hahaha", "mkdir", "prettierrc", "unist"]
+  "cSpell.words": [
+    "commitlint",
+    "eslintignore",
+    "hahaha",
+    "mkdir",
+    "prettierrc",
+    "unist"
+  ]
 }
