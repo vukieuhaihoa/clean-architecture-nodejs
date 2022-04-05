@@ -146,6 +146,15 @@ Note: This project run on Node version: v16.13.2
    npx husky-init && yarn
    ```
 
+   3.10 Add git commit conventional
+   using CommitLint, it help us make sure your commit adapt convention
+
+   ```sh
+   yarn add -D  @commitlint/{config-conventional,cli}
+   npx husky add .husky/commit-msg ""
+   touch .commitlintrc.js
+   ```
+
 ## License
 
 MIT
