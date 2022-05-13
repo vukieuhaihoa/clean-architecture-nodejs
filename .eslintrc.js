@@ -27,6 +27,9 @@ module.exports = {
     'import/extensions': 'off', // index instead of index.js
     'import/no-unresolved': 'error', // turn on errors for missing imports
     'no-console': 'off', // allow using console
+    'import/prefer-default-export': 'off',
+    'no-unused-vars': 'off',
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     camelcase: 'error',
     'import/order': [
       // setting rank of import

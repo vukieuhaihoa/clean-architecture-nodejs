@@ -1,0 +1,8 @@
+2022-05-13 17:39:38:3938 [35mhttp[39m: [35mPOST /api/v1/user 500 543 - 17.293 ms[39m
+[35m[39m
+2022-05-13 17:40:17:4017 [35mhttp[39m: [35mGET /api/v1/user?email=hoa@gmail.com 200 556 - 55.074 ms[39m
+[35m[39m
+2022-05-13 17:42:35:4235 [35mhttp[39m: [35mGET /api/v1/user?email=hoa@gmail.com 200 11 - 9.766 ms[39m
+[35m[39m
+2022-05-13 17:42:38:4238 [35mhttp[39m: [35mPOST /api/v1/user 500 543 - 30.167 ms[39m
+[35m[39m

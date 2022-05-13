@@ -1,10 +1,15 @@
 {
   "cSpell.words": [
+    "camelcase",
+    "codepaths",
     "commitlint",
     "eslintignore",
     "hahaha",
     "mkdir",
     "prettierrc",
+    "sequelizerc",
+    "tsbuildinfo",
+    "unfollow",
     "unist"
   ]
 }
