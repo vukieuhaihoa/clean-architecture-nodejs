@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import statusCodes from 'http-status';
+
 import { getUser } from '@src/use-cases/user';
 
 export const getUserController = (

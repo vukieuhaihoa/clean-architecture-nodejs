@@ -1,4 +1,5 @@
 import faker from '@faker-js/faker';
+
 import { IUserInfo } from '@src/entities/user/interface';
 
 function makeFakeUser(overrides: any) {

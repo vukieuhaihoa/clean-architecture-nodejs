@@ -35,7 +35,7 @@ module.exports = {
       // setting rank of import
       'error',
       {
-        'newlines-between': 'never',
+        'newlines-between': 'always',
         groups: [
           ['builtin', 'external'],
           ['internal', 'parent', 'sibling', 'index'],

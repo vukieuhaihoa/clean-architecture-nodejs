@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import statusCodes from 'http-status';
+
 import { addUser } from '@src/use-cases/user';
 import { ICreatUserRequest } from './interface';
 

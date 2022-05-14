@@ -1,4 +1,5 @@
 import morgan, { StreamOptions } from 'morgan';
+
 import Logger from '@src/configs/winston';
 
 // Override the stream method by telling

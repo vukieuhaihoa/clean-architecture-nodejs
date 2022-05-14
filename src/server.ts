@@ -1,6 +1,8 @@
 import express, { Application, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import compression from 'compression';
+
 import { config } from '@src/configs';
 import { settingRoutes } from './routes';
 import morganMiddleware from './middlewares/morgan';
@@ -12,6 +14,8 @@ export function start() {
   app.use(bodyParser.urlencoded({ extended: true }));
 
   app.use(cors());
+
+  app.use(compression());
 
   // add custom middlewares
   app.use(morganMiddleware);
