@@ -1,7 +1,7 @@
 import { IUserInfo } from '@src/entities/user/interface';
 import { IUserDataAccess } from '../interface';
 
-function buildMakePgDataAccess({
+function buildMakeMemoryDataAccess({
   UserModel,
 }: {
   UserModel: any;
@@ -14,17 +14,12 @@ function buildMakePgDataAccess({
       return [null, error];
     }
   }
+
   async function findByEmail(email: string) {
     try {
-      const res = await UserModel.findOne({
-        where: {
-          email,
-        },
-      });
+      const res = await UserModel.findOne({ email });
       return [res, null];
     } catch (error) {
-      console.log(error);
-
       return [null, error];
     }
   }
@@ -34,4 +29,4 @@ function buildMakePgDataAccess({
   });
 }
 
-export default buildMakePgDataAccess;
+export default buildMakeMemoryDataAccess;

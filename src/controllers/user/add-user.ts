@@ -13,7 +13,7 @@ export const addUserController = (
   addUser({ firstName, lastName, email })
     .then((result: any) => {
       const [data, err] = result;
-      if (err) next(err);
+      if (err !== null) next(err);
       else
         res.status(statusCodes.OK).json({
           data,

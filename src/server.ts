@@ -5,7 +5,9 @@ import compression from 'compression';
 
 import { config } from '@src/configs';
 import { settingRoutes } from './routes';
-import morganMiddleware from './middlewares/morgan';
+import morganMiddleware from './middlewares/logger';
+import { handleErrors } from './middlewares/error';
+import { notFoundError } from './middlewares/404';
 
 export function start() {
   const app: Application = express();
@@ -15,9 +17,10 @@ export function start() {
 
   app.use(cors());
 
+  // using gzip to compress response data to client
   app.use(compression());
 
-  // add custom middlewares
+  // logging middleware
   app.use(morganMiddleware);
 
   app.get('/welcome', (req: Request, res: Response) => {
@@ -26,6 +29,12 @@ export function start() {
 
   // TODO this
   settingRoutes(app);
+
+  // Not found error handler
+  app.use(notFoundError);
+
+  // error handle response
+  app.use(handleErrors);
 
   app.listen(config.PORT, () => {
     console.log('app is running on port', config.PORT);

@@ -21,7 +21,7 @@ const LEN_OF_USERS = 10;
   // write to src/repositories/memory/user.json
   const data = await JSON.stringify(users);
   fs.writeFile(
-    path.resolve('src/repositories/memory/user.json'),
+    path.resolve('src/repositories/memory/fake.json'),
     data,
     {},
     err => {
